@@ -21,3 +21,6 @@ Example:
 "wicked .. !" --> 6
 
 "!?..A" --> 1
+
+## Task 3
+Implement a function center that takes a string strng, an integer width, and an optional character fill (default: ' ') and returns a new string of length width where strng is centered and on the right and left padded with fill.
