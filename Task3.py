@@ -1,12 +1,7 @@
-def center(strng, width, fill=' '):
-    a = strng.count('') - 1
-    if a == width:
-        return strng
-    if fill == ' ' and width % 2 == 0:
-        return f'{fill * (1+(width - a) // 2)}{strng}{fill * ((width - a) // 2)}'
-    elif fill == ' ' and width % 2 != 0:
-        return f'{fill * ((width - a) // 2)}{strng}{fill * ((width - a) // 2)}'
-    elif (width - a) % 2 == 0:
-        return f'{fill * ((width - a) // 2)}{strng}{fill * ((width - a) // 2)}'
-    else:
-        return f'{fill * (1 + (width - a) // 2)}{strng}{fill * ((width - a) // 2)}'
+def sort_array(source_array):
+    arr = sorted([i for i in source_array if i % 2 != 0])
+    for i,el in enumerate(source_array):
+        if el % 2 != 0:
+            source_array[i] = arr[0]
+            arr.remove(arr[0])
+    return source_array
